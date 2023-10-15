@@ -9,8 +9,9 @@ html{
  .btn-group-action{
    display:flex;
    flex-direction:column;
+   margin-top:1%;
    .btn-now-playing{
-     width:50%;
+     width:96%;
      height:30px;
      border-radius:20px;
      border:none;
@@ -21,7 +22,7 @@ html{
      margin:6px;
    }
    .btn-top-rated{
-     width:50%;
+     width:96%;
      height:30px;
      border-radius:20px;
      border:none;
@@ -141,7 +142,11 @@ html{
   }
 
   .btn-now-playing{
-    width:100%;
+    width:50% !important; 
     margin-left:25%;
+  }
+
+  .btn-top-rated{
+    width:50% !important;
   }
 }
