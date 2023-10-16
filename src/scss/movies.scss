@@ -1,0 +1,209 @@
+html{
+ overflow-x:hidden;
+ overflow-y:scroll;
+}
+
+.col-4{
+  width:25%;
+  float:left;
+ .btn-group-action{
+   display:flex;
+   flex-direction:column;
+   margin-top:1%;
+   .btn-now-playing{
+     width:96%;
+     height:30px;
+     border-radius:20px;
+     border:none;
+     color:#fff;
+     background-color:blueviolet;
+     cursor:pointer;
+     font-size:17px;
+     margin:6px;
+   }
+   .btn-top-rated{
+     width:96%;
+     height:30px;
+     border-radius:20px;
+     border:none;
+     color:#fff;
+     background-color:#d87093;
+     cursor:pointer;
+     font-size:17px;
+     margin:6px;
+    }
+  }
+}
+
+.col-8{
+  width:75%;
+  border:1px solid #fff;
+  margin-left:15%;
+  cursor:pointer;
+  .tab-content{
+    display:flex;
+    gap:60px;
+    overflow-x:scroll;
+
+    .image{
+      img{
+       height:350px;
+       border-radius:5px;
+      }
+    }
+    .movie_title{
+      text-align:center;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      color:brown;
+    }
+    .movie_overview{
+      text-align:center;
+      color:gray; 
+    }
+    .movie_release_date{
+      margin-left:30%;
+      color:burlywood;
+    }
+    .col-2{
+      width:22%;
+      float:left;
+      padding:10px;
+      .card{
+        width:230px;
+        height:auto;
+        border:1px solid lightgray;
+      }
+
+      img{
+       width:230px;
+       height:308px;
+       margin-left:0
+      }
+
+      h2{
+       color:brown;
+       margin-left:14%;
+       white-space:nowrap;
+       overflow:hidden;
+       text-overflow:ellipsis;
+      }
+
+      p{
+       color:gray;
+       margin-left:14%;
+       white-space:nowrap;
+       overflow:hidden;
+       text-overflow:ellipsis;
+      }
+
+      span{
+       margin-left:35%;
+       color:burlywood;
+      }
+
+      .voted-movie{
+        width:17%;
+        height:25px;
+        padding:3px;
+        text-align:center;
+        display:flex;
+        .bi.bi-bag-check{
+          color:blue;
+        }
+        .vote{
+          color:violet;
+          margin-left:2px;
+        }
+      }
+      .image-loading{
+        margin-left:20%;
+      }
+
+      .btn-view-detail{
+        width:70%;
+        height:30px;
+        border-radius:20px;
+        border:none;
+        color:#fff;
+        background-color:#ffa233;
+        cursor:pointer;
+        font-size:17px;
+        margin:6px;
+        margin-left:16%;
+      }
+    }
+  }
+}
+
+.movie-detail{
+  display:flex;
+  justify-content:center;
+  img{
+   margin-top:1%;
+  }
+
+  .movie_detail_title{
+    text-align:center;
+    color:brown;
+  }
+
+  .movie_detail_overview{
+    text-align:center;
+    color:gray;
+    cursor:pointer;
+  }
+
+  .movie-content{
+    display:flex;
+    flex-direction:column;
+    width:30%;
+    height:auto;
+    margin-top:-1%;
+    border:1px solid lightgray;
+  }
+
+  .movie_detail_release_date{
+    text-align:center;
+    color:burlywood;
+  }
+
+  .btn-back{
+    height:30px;
+    border-radius:20px;
+    border:none;
+    color:#fff;
+    background-color:#08f;
+    cursor:pointer;
+    font-size:17px;
+    margin:6px
+  }
+}
+
+@media screen and (max-width:576px){
+  .tab-content{
+    display:flex;
+    flex-direction:column;
+    position:absolute;
+    top:10%;
+    left:22%;
+    img{
+     border-radius:10px !important;
+    }
+  }
+
+  .col-4{
+    width:100%;
+    margin-left:25%;
+  }
+
+  .btn-now-playing{
+    width:50% !important; 
+    margin-left:25%;
+  }
+
+  .btn-top-rated{
+    width:50% !important;
+  }
+}
