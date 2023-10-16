@@ -168,6 +168,17 @@ html{
     text-align:center;
     color:burlywood;
   }
+
+  .btn-back{
+    height:30px;
+    border-radius:20px;
+    border:none;
+    color:#fff;
+    background-color:#08f;
+    cursor:pointer;
+    font-size:17px;
+    margin:6px
+  }
 }
 
 @media screen and (max-width:576px){
