@@ -2,6 +2,7 @@ import {useEffect, useState} from "react"
 import axios from "axios"
 import ResultList from "../../interface/nowPlaying/Results"
 import imageLoading from "../../loading/loading.webp"
+import {Link} from "react-router-dom"
 const NowPlaying = () => {
   const [nowPlayingList, setNowPlayingList] = useState<ResultList | undefined>()
   const [loading, setLoading] = useState(false)
@@ -19,6 +20,7 @@ const NowPlaying = () => {
    setLoading(!loading)
    setNowPlayingList(res.data)
   }
+
   return (
    <>
      {
@@ -31,13 +33,12 @@ const NowPlaying = () => {
        return(
         <div key={index} className="col-2">
           <div className="card">
-           <img 
-             src={`https://image.tmdb.org/t/p/w440_and_h660_face/${i?.poster_path}`} 
-             alt=""
-           />
-           <h1 className="movie_title" title={i?.original_title}>{i.original_title}</h1>
-           <p className="movie_overview" title={i?.overview}>{i.overview}</p>
-           <span className="movie_release_date">{i?.release_date}</span>
+            <Link to={`/movie/${i?.id}`}>
+              <img src={`https://image.tmdb.org/t/p/w440_and_h660_face/${i?.poster_path}`} alt=""/>
+            </Link>
+            <h1 className="movie_title" title={i?.original_title}>{i.original_title}</h1>
+            <p className="movie_overview" title={i?.overview}>{i.overview}</p>
+            <span className="movie_release_date">{i?.release_date}</span>
           </div>
         </div>
        )

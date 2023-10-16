@@ -120,7 +120,53 @@ html{
       .image-loading{
         margin-left:20%;
       }
+
+      .btn-view-detail{
+        width:70%;
+        height:30px;
+        border-radius:20px;
+        border:none;
+        color:#fff;
+        background-color:#ffa233;
+        cursor:pointer;
+        font-size:17px;
+        margin:6px;
+        margin-left:16%;
+      }
     }
+  }
+}
+
+.movie-detail{
+  display:flex;
+  justify-content:center;
+  img{
+   margin-top:1%;
+  }
+
+  .movie_detail_title{
+    text-align:center;
+    color:brown;
+  }
+
+  .movie_detail_overview{
+    text-align:center;
+    color:gray;
+    cursor:pointer;
+  }
+
+  .movie-content{
+    display:flex;
+    flex-direction:column;
+    width:30%;
+    height:auto;
+    margin-top:-1%;
+    border:1px solid lightgray;
+  }
+
+  .movie_detail_release_date{
+    text-align:center;
+    color:burlywood;
   }
 }
 
