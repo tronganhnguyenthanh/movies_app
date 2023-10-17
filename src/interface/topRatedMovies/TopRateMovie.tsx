@@ -1,5 +1,5 @@
 interface TopRateMovie{
-  first_air_date:String,
+  first_air_date:Date,
   original_name:string,
   overview:string,
   poster_path:String,

@@ -3,6 +3,7 @@ import axios from "axios"
 import ResultList from "../../interface/nowPlaying/Results"
 import imageLoading from "../../loading/loading.webp"
 import {Link} from "react-router-dom"
+import moment from "moment"
 const NowPlaying = () => {
   const [nowPlayingList, setNowPlayingList] = useState<ResultList | undefined>()
   const [loading, setLoading] = useState(false)
@@ -38,7 +39,7 @@ const NowPlaying = () => {
             </Link>
             <h1 className="movie_title" title={i?.original_title}>{i.original_title}</h1>
             <p className="movie_overview" title={i?.overview}>{i.overview}</p>
-            <span className="movie_release_date">{i?.release_date}</span>
+            <span className="movie_release_date">{moment(i?.release_date).format("MMMM Do, YYYY")}</span>
           </div>
         </div>
        )

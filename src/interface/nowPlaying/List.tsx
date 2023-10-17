@@ -4,6 +4,6 @@ interface MovieList{
   original_title:string,
   overview:string,
   poster_path:String,
-  release_date:String
+  release_date:Date
 }
 export default MovieList

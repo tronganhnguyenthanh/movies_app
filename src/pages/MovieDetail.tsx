@@ -2,6 +2,7 @@ import {useEffect, useState} from "react"
 import {useNavigate, useParams} from "react-router-dom"
 import axios from "axios"
 import movieDetail from "../interface/movieDetail/movieDetail"
+import moment from "moment"
 const MovieDetail = () => {
     const {id} = useParams()
     const navigate = useNavigate()
@@ -29,7 +30,9 @@ const MovieDetail = () => {
                 <br />
                 <h1 className="movie_detail_title">{detailNowPlaying?.original_title}</h1>
                 <p className="movie_detail_overview">{detailNowPlaying?.overview}</p>
-                <span className="movie_detail_release_date">{detailNowPlaying?.release_date}</span>
+                <span className="movie_detail_release_date">
+                  {moment(detailNowPlaying?.release_date).format("MMMM Do, YYYY")}
+                </span>
                 <button className="btn-back" onClick={goBack}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-bar-left" viewBox="0 0 16 16">
                     <path fillRule="evenodd" d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5ZM10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5Z" />

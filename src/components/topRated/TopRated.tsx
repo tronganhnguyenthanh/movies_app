@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import TopRateMovieList from "../../interface/topRatedMovies/TopRateMovieList"
 import axios from "axios"
 import imageLoading from "../../loading/loading.webp"
+import moment from "moment"
 const TopRated = () => {
   const [topRatedMovies, setTopRatedMovies] = useState<TopRateMovieList | undefined>()
   const [loading, setLoading] = useState(false)
@@ -37,7 +38,7 @@ const TopRated = () => {
               />
               <h2 title={i?.original_name}>{i?.original_name}</h2>
               <p title={i?.overview}>{i?.overview}</p>
-              <span>{i?.first_air_date}</span>
+              <span>{moment(i?.first_air_date).format("MMMM Do, YYYY")}</span>
               <div className="voted-movie">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-bag-check" viewBox="0 0 16 16">
                   <path fillRule="evenodd" d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
